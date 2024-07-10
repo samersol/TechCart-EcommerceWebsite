@@ -2,7 +2,7 @@ import { Router } from "express";
 import Stripe from "stripe";
 const router = Router();
 
-const stripeSecretKey = process.env.STRIPE_SECRET_KEY;
+const stripeSecretKey = "sk_test_51PYVdiJLyIUYSJmxB7V4z58QhbnX6ypcie0yNO65zBfkFCzmYBtEDr7fR0HWfPlALr49sM2T6QHs0GalHaoPB6KE00PDBvFzgJ";
 
 router.post("/checkout", async (req, res) => {
   const stripe = new Stripe(stripeSecretKey, {
